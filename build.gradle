@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'war'
+
+
+description = 'WPSJ (JSP) thực hành'
+    group = 'vn.aptech'
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile 'javax:javaee-web-api:6.0'
+    implementation 'org.apache.taglibs:taglibs-standard-spec:1.2.5'
+    runtimeOnly 'org.apache.taglibs:taglibs-standard-impl:1.2.5'
+    implementation 'mysql:mysql-connector-java:8.0.23'
+    
+    testImplementation     'junit:junit:4.13'
+}
